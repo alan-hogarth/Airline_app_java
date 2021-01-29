@@ -19,6 +19,12 @@ public class PassengerTest {
 
     @Test
     public void passengerHasBag(){
+
         assertEquals(1, passenger.getBags());
+    }
+
+    @Test
+    public void canSetBags(){
+        assertEquals(1, passenger.setBags(1));
     }
 }

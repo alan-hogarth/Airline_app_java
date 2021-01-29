@@ -13,6 +13,7 @@ public class FlightTest {
     private Passenger passenger3;
     private Passenger passenger4;
     private Passenger passenger5;
+    private Passenger passenger6;
     private Plane plane;
 
     @Before
@@ -22,6 +23,7 @@ public class FlightTest {
         passenger3 = new Passenger("Barbara", 3);
         passenger4 = new Passenger("Gwen", 1);
         passenger5 = new Passenger("Dolly", 1);
+        passenger6 = new Passenger("Molly", 1);
         plane = new Plane(PlaneType.BOEING747);
         flight = new Flight(plane, "EZ234", "New Orleans", 
                 "Glasgow", "9am");
@@ -61,7 +63,9 @@ public class FlightTest {
         flight.addPassenger(passenger3);
         flight.addPassenger(passenger4);
         flight.addPassenger(passenger5);
-        assertEquals(4, flight.getPassengerCount());
+        flight.addPassenger(passenger6);
+        assertEquals(5, flight.getPassengerCount());
+
     }
 
     @Test
@@ -70,7 +74,7 @@ public class FlightTest {
         flight.addPassenger(passenger2);
         flight.addPassenger(passenger3);
         assertEquals(3, flight.getPassengerCount());
-        assertEquals(1, flight.countRemainingSeats());
+        assertEquals(2, flight.countRemainingSeats());
     }
 
 //    @Test

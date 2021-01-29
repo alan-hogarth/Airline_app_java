@@ -20,7 +20,7 @@ public class Passenger {
         return bags;
     }
 
-    public void setBags(int bags) {
-        this.bags = bags;
+    public int setBags(int bags) {
+       return this.bags = bags;
     }
 }

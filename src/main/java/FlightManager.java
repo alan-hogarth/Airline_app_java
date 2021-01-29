@@ -21,7 +21,7 @@ public class FlightManager {
         return singleBagAllowance;
     }
 
-    public int assignBagWeight(){
+    public int getBagWeight(){
         return passenger.getBags() * bagWeightPerPassenger();
     }
 }
