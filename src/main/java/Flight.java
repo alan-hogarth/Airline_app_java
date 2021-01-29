@@ -40,6 +40,12 @@ public class Flight {
     }
 
     public void addPassenger(Passenger passenger) {
+        if (getPassengerCount() < plane.getPlaneCapacity()) {
             passengers.add(passenger);
+        }
+    }
+
+    public int countRemainingSeats() {
+        return this.getPassengerCount() -= plane.getPlaneCapacity();
     }
 }

@@ -6,10 +6,17 @@ import static junit.framework.TestCase.assertEquals;
 public class PlaneTest {
 
     private Plane plane;
+    private Passenger passenger1;
+    private Passenger passenger2;
+    private Flight flight;
 
     @Before
     public void before(){
         plane = new Plane(PlaneType.BOEING747);
+        passenger1 = new Passenger("Clive", 1);
+        passenger1 = new Passenger("Zelda",2);
+        flight = new Flight(plane, "EZ234", "New Orleans",
+                "Glasgow", "9am");
     }
 
     @Test
@@ -19,8 +26,9 @@ public class PlaneTest {
 
     @Test
     public void planeHasCapacity(){
-        assertEquals(10, plane.getPlaneCapacity());
+        assertEquals(4, plane.getPlaneCapacity());
     }
+
 
     @Test
     public void planeHasWeight(){

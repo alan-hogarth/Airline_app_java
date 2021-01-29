@@ -2,8 +2,10 @@ public class Plane {
 
     private PlaneType plane;
 
+
     public Plane(PlaneType plane){
         this.plane = plane;
+
     }
 
 
@@ -19,4 +21,5 @@ public class Plane {
     public int getPlaneWeight() {
         return this.plane.getWeight();
     }
+
 }

@@ -10,12 +10,18 @@ public class FlightTest {
     private Flight flight;
     private Passenger passenger1;
     private Passenger passenger2;
+    private Passenger passenger3;
+    private Passenger passenger4;
+    private Passenger passenger5;
     private Plane plane;
 
     @Before
     public void before(){
         passenger1 = new Passenger("Slick", 1);
         passenger2 = new Passenger("Franco", 2);
+        passenger3 = new Passenger("Barbara", 3);
+        passenger4 = new Passenger("Gwen", 1);
+        passenger5 = new Passenger("Dolly", 1);
         plane = new Plane(PlaneType.BOEING747);
         flight = new Flight(plane, "EZ234", "New Orleans", 
                 "Glasgow", "9am");
@@ -26,6 +32,7 @@ public class FlightTest {
         int result = flight.getPassengerCount();
         assertEquals(0, result);
     }
+
 
     @Test
     public void hasFlightNumber(){
@@ -50,6 +57,20 @@ public class FlightTest {
     @Test
     public void canAddPassenger(){
         flight.addPassenger(passenger1);
-        assertEquals(1, flight.getPassengerCount());
+        flight.addPassenger(passenger2);
+        flight.addPassenger(passenger3);
+        flight.addPassenger(passenger4);
+        flight.addPassenger(passenger5);
+        assertEquals(4, flight.getPassengerCount());
+    }
+
+    @Test
+    public void canCountRemainingSeats(){
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        flight.addPassenger(passenger3);
+        flight.countRemainingSeats();
+        assertEquals(1, plane.getPlaneCapacity());
+
     }
 }
