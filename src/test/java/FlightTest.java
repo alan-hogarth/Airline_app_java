@@ -79,8 +79,8 @@ public class FlightTest {
 
 //    @Test
 //    public void canAddPassengerBags(){
+//        flight.addPassenger(passenger1);
 //        passenger1.getBags();
-//        flight.addBags();
-//        assertEquals(1, );
+//        assertEquals(1,flight.addBags());
 //    }
 }

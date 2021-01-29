@@ -41,7 +41,7 @@ public class FlightManagerTest {
     }
 
     @Test
-    public void canCheckBagWeightPerPassenger(){
+    public void canCheckBagWeightAllowance(){
         int total = flightManager.bagWeightPerPassenger();
         assertEquals(12, total, 0.0);
     }
@@ -51,15 +51,5 @@ public class FlightManagerTest {
         int total = flightManager.getBagWeight();
         assertEquals(12, total, 0.0);
     }
-
-    @Test
-    public void canAddPassenger() {
-        flight.addPassenger(passenger1);
-        flight.addPassenger(passenger2);
-        flight.addPassenger(passenger3);
-        flight.addPassenger(passenger4);
-        flight.addPassenger(passenger5);
-        assertEquals(60,  flightManager.getBagWeight());
-
-    }
+    
 }
