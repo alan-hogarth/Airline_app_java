@@ -46,6 +46,7 @@ public class Flight {
     }
 
     public int countRemainingSeats() {
-        return this.getPassengerCount() -= plane.getPlaneCapacity();
+      int freeSeats = plane.getPlaneCapacity() - getPassengerCount();
+      return freeSeats;
     }
 }

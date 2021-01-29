@@ -65,12 +65,13 @@ public class FlightTest {
     }
 
     @Test
-    public void canCountRemainingSeats(){
+    public void canCountSeats() {
         flight.addPassenger(passenger1);
         flight.addPassenger(passenger2);
         flight.addPassenger(passenger3);
-        flight.countRemainingSeats();
-        assertEquals(1, plane.getPlaneCapacity());
-
+        assertEquals(3, flight.getPassengerCount());
+        assertEquals(2, flight.countRemainingSeats());
     }
+
+
 }
