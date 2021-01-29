@@ -49,4 +49,7 @@ public class Flight {
       int freeSeats = plane.getPlaneCapacity() - getPassengerCount();
       return freeSeats;
     }
+
+
+
 }

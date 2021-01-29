@@ -70,8 +70,13 @@ public class FlightTest {
         flight.addPassenger(passenger2);
         flight.addPassenger(passenger3);
         assertEquals(3, flight.getPassengerCount());
-        assertEquals(2, flight.countRemainingSeats());
+        assertEquals(1, flight.countRemainingSeats());
     }
 
-
+//    @Test
+//    public void canAddPassengerBags(){
+//        passenger1.getBags();
+//        flight.addBags();
+//        assertEquals(1, );
+//    }
 }

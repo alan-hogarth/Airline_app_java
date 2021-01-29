@@ -32,7 +32,7 @@ public class PlaneTest {
 
     @Test
     public void planeHasWeight(){
-        assertEquals(10, plane.getPlaneWeight());
+        assertEquals(100, plane.getPlaneWeight());
 
     }
 }
