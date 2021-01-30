@@ -24,4 +24,9 @@ public class FlightManager {
     public int getBagWeight(){
         return passenger.getBags() * bagWeightPerPassenger();
     }
+
+    public int getRemainingHoldWeight() {
+        int totalBagAllowance = plane.getPlaneWeight() / 2;
+        return totalBagAllowance - getBagWeight();
+    }
 }
