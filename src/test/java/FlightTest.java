@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -18,14 +19,14 @@ public class FlightTest {
 
     @Before
     public void before(){
-        passenger1 = new Passenger("Slick", 1);
-        passenger2 = new Passenger("Franco", 2);
-        passenger3 = new Passenger("Barbara", 3);
-        passenger4 = new Passenger("Gwen", 1);
-        passenger5 = new Passenger("Dolly", 1);
-        passenger6 = new Passenger("Molly", 1);
+        passenger1 = new Passenger("Slick", 1, 2);
+        passenger2 = new Passenger("Franco", 2, 3);
+        passenger3 = new Passenger("Barbara", 3, 4);
+        passenger4 = new Passenger("Gwen", 1, 5);
+        passenger5 = new Passenger("Dolly", 1, 6);
+        passenger6 = new Passenger("Molly", 1, 7);
         plane = new Plane(PlaneType.BOEING747);
-        flight = new Flight(plane, "EZ234", "New Orleans", 
+        flight = new Flight(plane, "EZ234", "New Orleans",
                 "Glasgow", "9am");
     }
     
@@ -77,10 +78,5 @@ public class FlightTest {
         assertEquals(2, flight.countRemainingSeats());
     }
 
-//    @Test
-//    public void canAddPassengerBags(){
-//        flight.addPassenger(passenger1);
-//        passenger1.getBags();
-//        assertEquals(1,flight.addBags());
-//    }
+
 }

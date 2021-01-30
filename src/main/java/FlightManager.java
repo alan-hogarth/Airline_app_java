@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class FlightManager {
 
     private Passenger passenger;
-//    private ArrayList<Passenger> passengers;
     private Plane plane;
     private Flight flight;
 
@@ -11,7 +10,6 @@ public class FlightManager {
         this.flight = flight;
         this.passenger = passenger;
         this.plane = new Plane(PlaneType.BOEING747);
-//        this.passengers = new ArrayList<Passenger>();
 
     }
 

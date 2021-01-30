@@ -13,8 +13,8 @@ public class PlaneTest {
     @Before
     public void before(){
         plane = new Plane(PlaneType.BOEING747);
-        passenger1 = new Passenger("Clive", 1);
-        passenger1 = new Passenger("Zelda",2);
+        passenger1 = new Passenger("Clive", 1, 8);
+        passenger1 = new Passenger("Zelda",2, 9);
         flight = new Flight(plane, "EZ234", "New Orleans",
                 "Glasgow", "9am");
     }
