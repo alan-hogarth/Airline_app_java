@@ -47,7 +47,7 @@ public class Flight {
     public void addPassenger(Passenger passenger) {
         if (getPassengerCount() < plane.getPlaneCapacity()) {
             passengers.add(passenger);
-            assignRandomSeatNumber();
+                assignRandomSeatNumber();
         }
     }
 
@@ -60,7 +60,10 @@ public class Flight {
         Random random = new Random();
         int seatNumber;
         for (Passenger passenger : passengers){
-             seatNumber = passenger.setSeatNo(random.nextInt(120));
+                seatNumber = passenger.setSeatNo(random.nextInt(120));
+            if (passenger.getSeatNo() == passenger.getSeatNo()){
+                seatNumber --;
+            }
         }
     }
 
