@@ -5,12 +5,14 @@ public class Passenger {
     private String name;
     private int bags;
     private int seatNo;
+    private Flight flight;
 
 
-    public Passenger(String name, int bags, int seatNo){
+    public Passenger(String name, int bags, int seatNo, Flight flight){
         this.name = name;
         this.bags = bags;
         this.seatNo = seatNo;
+        this.flight = flight;
     }
 
     public String getName() {
@@ -35,5 +37,9 @@ public class Passenger {
 
     public int setSeatNo(int seatNo) {
         return this.seatNo = seatNo;
+    }
+
+    public Flight getFlight() {
+        return flight;
     }
 }

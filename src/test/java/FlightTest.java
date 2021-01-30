@@ -19,12 +19,12 @@ public class FlightTest {
 
     @Before
     public void before(){
-        passenger1 = new Passenger("Slick", 1, 2);
-        passenger2 = new Passenger("Franco", 2, 3);
-        passenger3 = new Passenger("Barbara", 3, 4);
-        passenger4 = new Passenger("Gwen", 1, 5);
-        passenger5 = new Passenger("Dolly", 1, 6);
-        passenger6 = new Passenger("Molly", 1, 7);
+        passenger1 = new Passenger("Slick", 1, 2, flight);
+        passenger2 = new Passenger("Franco", 2, 3, flight);
+        passenger3 = new Passenger("Barbara", 3, 4, flight);
+        passenger4 = new Passenger("Gwen", 1, 5, flight);
+        passenger5 = new Passenger("Dolly", 1, 6, flight);
+        passenger6 = new Passenger("Molly", 1, 7, flight);
         plane = new Plane(PlaneType.BOEING747);
         flight = new Flight(plane, "EZ234", "New Orleans",
                 "Glasgow", "9am");

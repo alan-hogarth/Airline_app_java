@@ -6,10 +6,11 @@ import static junit.framework.TestCase.assertEquals;
 public class PassengerTest {
 
     private Passenger passenger;
+    private Flight flight;
 
     @Before
     public void before(){
-        passenger = new Passenger("Carlos", 1, 1);
+        passenger = new Passenger("Carlos", 1, 1, flight);
     }
 
     @Test
@@ -36,5 +37,10 @@ public class PassengerTest {
     @Test
     public void canSetSeatNo(){
         assertEquals(1, passenger.setSeatNo(1));
+    }
+
+    @Test
+    public void canGetFlight(){
+        assertEquals(flight, passenger.getFlight());
     }
 }

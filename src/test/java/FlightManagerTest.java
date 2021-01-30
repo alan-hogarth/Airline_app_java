@@ -17,11 +17,11 @@ public class FlightManagerTest {
 
     @Before
     public void before(){
-        passenger1 = new Passenger("Slick", 1, 1);
-        passenger2 = new Passenger("Franco", 2, 2);
-        passenger3 = new Passenger("Barbara", 3, 3);
-        passenger4 = new Passenger("Gwen", 1, 4);
-        passenger5 = new Passenger("Dolly", 1, 5);
+        passenger1 = new Passenger("Slick", 1, 1, flight);
+        passenger2 = new Passenger("Franco", 2, 2, flight);
+        passenger3 = new Passenger("Barbara", 3, 3, flight);
+        passenger4 = new Passenger("Gwen", 1, 4, flight);
+        passenger5 = new Passenger("Dolly", 1, 5, flight);
         plane = new Plane(PlaneType.BOEING747);
         flight = new Flight(plane, "EZ234", "New Orleans",
                 "Glasgow", "9am");
