@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
 public class Runner {
+
+    private static Object ArrayList;
 
     public static void main(String[] args) {
 
@@ -19,12 +23,12 @@ public class Runner {
         flight.addPassenger(passenger4);
         flight.addPassenger(passenger5);
 
-
         System.out.println(passenger1.getSeatNo());
         System.out.println(passenger2.getSeatNo());
         System.out.println(passenger3.getSeatNo());
         System.out.println(passenger4.getSeatNo());
         System.out.println(passenger5.getSeatNo());
+
 
 
     }
