@@ -8,6 +8,8 @@ public class Flight {
     private String destination;
     private String departureAirport;
     private String departureTime;
+    private ArrayList<Integer> seatNumbers;
+
 
 
     public Flight (Plane plane, String flightNumber, String destination, String departureAirport, String departureTime) {
@@ -17,8 +19,17 @@ public class Flight {
         this.destination = destination;
         this.departureAirport = departureAirport;
         this.departureTime = departureTime;
+        this.seatNumbers = generateSeatNumbers();
+
     }
 
+    private ArrayList<Integer> generateSeatNumbers() {
+        ArrayList<Integer> seatNumbers = new ArrayList<>();
+        for(int i = 1; i <= this.plane.getPlaneCapacity(); i ++){
+            seatNumbers.add(i);
+        }
+        return seatNumbers;
+    }
 
     public int getPassengerCount() {
         return passengers.size();
@@ -44,7 +55,7 @@ public class Flight {
     public void addPassenger(Passenger passenger) {
         if (getPassengerCount() < plane.getPlaneCapacity()) {
             passengers.add(passenger);
-                assignRandomSeatNumber();
+                assignRandomSeatNumber(passenger);
         }
     }
 
@@ -53,10 +64,16 @@ public class Flight {
       return freeSeats;
     }
 
-    public void assignRandomSeatNumber() {
+    public void assignRandomSeatNumber(Passenger passenger) {
         Random random = new Random();
-        int seatNumber;
-        for (Passenger passenger : passengers)
-            seatNumber = passenger.setSeatNo(random.nextInt(120) + 1);
+        int randomIndex = random.nextInt(this.seatNumbers.size());
+        Integer seatNumber = this.seatNumbers.remove(randomIndex);
+        passenger.setSeatNo(seatNumber);
     }
+
+    public ArrayList<Integer> getSeatNumbers() {
+        return seatNumbers;
+    }
+
+
 }

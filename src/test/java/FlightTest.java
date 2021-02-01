@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class FlightTest {
 
@@ -76,6 +77,18 @@ public class FlightTest {
         flight.addPassenger(passenger3);
         assertEquals(3, flight.getPassengerCount());
         assertEquals(2, flight.countRemainingSeats());
+    }
+
+    @Test
+    public void canGenerateSeatNumbers(){
+        assertEquals(5, flight.getSeatNumbers().size());
+    }
+
+    @Test
+    public void canAssignRandomSeatNumbers(){
+        flight.assignRandomSeatNumber(passenger1);
+        assertNotNull(passenger1.getSeatNo());
+        assertEquals(4, flight.getSeatNumbers().size());
     }
 
 
