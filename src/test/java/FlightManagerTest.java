@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class FlightManagerTest {
@@ -57,6 +59,18 @@ public class FlightManagerTest {
     public void canGetRemainingHoldWeight_2(){
         flightManager2.getBagWeight();
         assertEquals(36, flightManager2.getRemainingHoldWeight());
+    }
+
+    @Test
+    public void canSortPassengers(){
+        Plane plane = new Plane(PlaneType.BOEING747);
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        passenger1.setSeatNo(34);
+        passenger2.setSeatNo(24);
+        ArrayList<Passenger> sortedPassengers = flightManager1.sortPassengersBySeatNumber();
+        Passenger firstPassengerInArray = sortedPassengers.get(0);
+        assertEquals(passenger2, firstPassengerInArray);
     }
 
 }

@@ -23,6 +23,14 @@ public class Flight {
 
     }
 
+    public ArrayList<Passenger> getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(ArrayList<Passenger> passengers) {
+        this.passengers = passengers;
+    }
+
     private ArrayList<Integer> generateSeatNumbers() {
         ArrayList<Integer> seatNumbers = new ArrayList<>();
         for(int i = 1; i <= this.plane.getPlaneCapacity(); i ++){
